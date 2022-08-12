@@ -1,0 +1,894 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=DM+Mono:ital,wght@0,400;0,500;1,400;1,500&family=Inter&display=swap');
+
+ 
+@keyframes scroll {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-40%, 0)
+    }
+}
+
+@keyframes reverse-scroll {
+    0% {
+        transform: translate(-40%, 0);
+    }
+    100% {
+        transform: translate(0, 0)
+    }
+}
+
+body {
+    font-family: "DM Mono", monospace;
+    background-color: rgb(0, 0, 0);
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.center{
+    padding-left: calc(50% - 720px);
+    padding-right: calc(50% - 720px);
+}
+
+.header{
+    &__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-top: 52px;
+    }
+
+    
+    &__nav{
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+
+    &__links{
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        column-gap: 40px;
+    }
+
+
+    &__link{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        color: rgb(255, 255, 255);
+        list-style-type: none;
+        text-decoration: none;
+    
+    }
+
+    &__link:hover{
+       text-decoration: #8DFD1B underline 1px;
+       
+    }
+
+}
+
+.info{
+    display: flex;
+    height: 653px;
+    align-items: flex-start;
+   
+    &__text{
+        margin-top: 111px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        
+        justify-content: space-between;
+        row-gap: 115px;
+    }
+
+    &__left{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    &__name{
+        font-family: 'Audiowide';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 51px;
+        line-height: 61px;
+        color: #ffff;
+        height: 122px;
+    }
+
+    &__about{
+        color: #ffff;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        height: 77px;
+        width: 340px;
+    }
+
+    &__button{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;  
+        text-align: center;
+        text-transform: capitalize;
+        
+        color: #000000;
+        background: #8DFD1B;
+        border-radius: 0px;
+        height: 60px;
+        width: 205px;
+        box-sizing: border-box;
+    }
+
+    &__button:hover{
+        background: #000000;
+        color: #FFFFFF;
+        border: 1px solid #8DFD1B;
+    }
+    
+
+}
+
+.wave{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    column-gap: 220px;
+    margin-top: 124px;
+    &__name{
+        font-family: 'Audiowide';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 38px;
+        line-height: 45px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        
+        height: 46px;
+        margin: 0;
+    }
+
+    &__number{
+        font-family: 'Audiowide';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 38px;
+        line-height: 45px;
+        text-transform: uppercase;
+        color: #A8A8A8;
+        width: 359px;
+        height: 91px;
+        margin: 0;
+        margin-bottom: 41px;
+    }
+
+    &__box{
+        
+        border-left: 2px solid #8DFD1B;
+    }
+
+    &__green{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 32px;
+        color: #8DFD1B;
+        margin-left: 22px;
+        height: 128px;
+        width: 546px;
+    }
+
+    &__description{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #FFFFFF;
+        width: 555px;
+    }
+
+    &__description:nth-child(3){
+        height: 103px;
+        width: 582px;
+    }
+
+    &__button{
+        margin-top: 20px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+        text-transform: capitalize;
+        width: 246px;
+        height: 42px;
+        box-sizing: border-box;
+        border: 1px solid #8DFD1B;
+        border-radius: 0px;
+        background-color: #000000;
+        color: #FFFFFF;
+    }
+
+    &__button:hover{
+        color: rgb(0, 0, 0);
+        background-color: #8DFD1B;
+        border: 2px solid #000000;
+    }
+}
+
+.artist{
+    margin-top: 113px;
+
+    &__line{
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: #0000;
+        margin-bottom: 120px;
+    }
+
+    &__run{
+        display: inline-block;
+        padding-left: 100%;
+        animation: scroll 5s infinite linear;
+        font-family: 'Audiowide';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 79px;
+        line-height: 88px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        word-spacing: 394px;
+    }
+
+    
+    &__gallery{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 60px;
+        margin-left: 40px;
+    }
+
+    &__card{
+        transition: all .3s;
+        box-sizing: border-box;
+    }
+
+    &__card:hover{
+        // animation: card__scope 1s ease-in 0s 1 normal forwards;
+        transform: scale(1.1);
+        box-shadow: 0 0 5px #8DFD1B; 
+        cursor: pointer;
+    }
+
+    &__name{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    &__name:hover{
+        color:  #8DFD1B;
+        // text-decoration: underline #8DFD1B;
+        
+    }
+}
+
+.story{
+    margin-top: 240px;
+    
+    &__container{
+        display: flex;
+        column-gap: 5px;
+    }
+
+    &__content{
+        display: flex;
+        column-gap: 40px;
+    }
+
+    &__box{
+        box-sizing: border-box;
+        border-left: 1px solid #8DFD1B;
+    }
+
+    &__green{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 32px;
+        /* or 152% */
+        margin-left: 14px;
+        
+        color: #8DFD1B;
+    }
+
+    &__right{
+        background: #222222;
+        border-radius: 0px;
+        padding: 60px;
+    }
+
+    &__img{
+        height: 253px;
+    }
+
+    &__text{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        /* or 160% */
+        
+        
+        color: #FFFFFF;
+        
+    }
+
+    &__name{
+        font-family: 'Audiowide';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 37px;
+        line-height: 45px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 61px;
+    }
+
+    &__gray{
+        color: #A8A8A8;
+
+    }
+    &__menu{
+        height: 226px;
+    }
+    &__items{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        // row-gap: 35px;
+        margin: 0;
+    }
+    
+    &__item{
+        margin-top: 25px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        list-style-type: none;
+        vertical-align: middle;
+        margin-left: 28px;
+    }
+
+    &__link{
+        text-decoration: none;
+        height: 72px;
+        width: 282px;
+        line-height: 16px;
+        color: #FFFFFF;
+    }
+    
+    &__link:hover{
+        border: .1px solid #8DFD1B; 
+        cursor: pointer;
+        background-color: #222222;
+        color: #8DFD1B;
+    }
+
+   
+}
+
+.roadmap{
+    padding-top: 120px;
+    padding-bottom: 288px;
+    &__preview{
+        background-image: url('../img/roadmap__preview.png');    
+        height: 240px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    color: #FFFFFF;
+
+    &__cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    &__card{
+        background: #222222;
+        padding: 12px;
+        border: 1px solid #8DFD1B;
+    }
+
+    &__name{
+        font-family: 'Audiowide';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 38px;
+        line-height: 45px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 61px;
+        margin-top: 118px;
+    }
+
+
+    &__title{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 12px;
+        border-bottom: 1px solid #8DFD1B;
+        margin-left: 0;
+        margin-right: 0;
+        width: 539px;
+    }
+
+
+    &__number{
+        background: #222222;
+        border: 1px solid #8DFD1B;
+       
+        height: 45px;
+        width: 45px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 28px;
+        color: #8DFD1B;
+        margin: 8px 16px ; 
+    }
+
+
+    &__green{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        
+        color: #8DFD1B;
+        margin-top: 15px;
+        padding-bottom: 1px;
+    }
+
+    &__date{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 18px;
+        height: 28px;
+        
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 30px;   
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        row-gap: 6px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 32px;
+    }
+
+    &__info>span{
+        margin-left: 22px;
+    }
+
+    &__text{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 26px;
+        color: #FFFFFF;
+        width: 298px;
+    }
+
+    &__text-title{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 26px;
+        color: #FFFFFF;
+        width: 167px;
+    }
+
+    &__greenstick{
+        background: #8DFD1B;
+        border-radius: 0px;
+        height: 40px;
+        width: 1px;
+        margin-top: 45px;
+        margin-bottom: 50px;
+    }
+
+    &__link{
+        color: #8DFD1B;
+        text-decoration: none;
+    }
+
+    &__link:hover{
+        
+        text-decoration: underline;
+    }
+}
+
+.partners{
+
+    &__title{
+        font-family: 'DM Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #8DFD1B;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+
+    &__line{
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: #0000;
+        margin-bottom: 60px;
+    }
+
+    &__run{
+        display: inline-block;
+        padding-left: 100%;
+        animation: scroll 5s infinite linear;
+        font-family: 'Audiowide';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 38px;
+        line-height: 45px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        word-spacing: 85px;
+    }
+
+    &__run-reverse{
+        animation: reverse-scroll 5s infinite linear;
+    }
+}
+
+.faq{
+    margin-top: 245px;
+    margin-bottom: 115px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+
+    &__name{
+        font-family: 'Audiowide';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 38px;
+        line-height: 45px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        height: 46px;
+        margin: 0;
+    }
+
+    &__name-gray{
+        color: #A8A8A8;
+    }
+
+    &__card{
+        margin-top: 51px;
+    }
+
+    &__content{
+        background: #222222;
+        height: 440px;
+
+    }
+
+    &__question{
+        font-family: 'DM Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        padding: 2px 25px 2px 25px;
+    }
+
+    &__answer{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 19px;
+        color: #C4C4C4;
+        width: 514px;
+        padding: 2px 30px 2px 30px ;
+        
+
+    }
+
+}
+
+.team{
+    margin-bottom: 325px;
+
+    &__line{
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: #0000;
+        margin-bottom: 60px;
+    }
+
+    &__run{
+        display: inline-block;
+        padding-left: 100%;
+        animation: scroll 5s infinite linear;
+        font-family: 'Audiowide';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 79px;
+        line-height: 88px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        word-spacing: 255px;
+    }
+    
+
+    &__list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    &__card{
+        transition: all 0.3s;
+    }
+
+    &__card:hover{
+        transform: scale(1.09);
+        box-shadow: 0 0 7px #8DFD1B;
+    }
+
+    &__description{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 320px;
+        row-gap: 20px;
+    }
+
+    &__name{
+        font-family: 'DM Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 28px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin: 20px 0 0 0;
+       
+    }
+
+    &__position{
+        font-family: 'DM Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #8DFD1B;
+    }
+
+
+    &__bio{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 19px;
+        text-align: center;
+        color: #FFFFFF;
+        width: 238px;
+    }
+}
+
+.discord{
+    margin-bottom: 118px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    &__title{
+        font-family: 'Audiowide';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 51px;
+        line-height: 61px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        width: 300px;
+    }
+
+    &__marked{
+        font-family: 'Audiowide';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 51px;
+        line-height: 61px;
+        text-transform: uppercase;
+        color: #8DFD1B;
+    }
+
+    &__text{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #FFFFFF;
+        width: 345px;
+    }
+
+    &__btn{
+        background: #8DFD1B;
+        border-radius: 0px;
+        height: 43px;
+        width: 213px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        column-gap: 9px;
+    }
+
+    &__btn:hover{
+        background: #000000;
+        border: 1px solid #8DFD1B;
+        box-shadow: 0 0 5px #8DFD1B;
+    }
+
+   
+
+    &__link{
+        font-family: 'DM Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #000000;
+        padding: 5px;
+        text-decoration: none;
+    }
+
+    &__btn:hover>&__link{
+        color: #8DFD1B;
+    }
+
+    &__hiden{
+        display: none;
+    }
+}
+
+.footer{
+    background: #42006A;
+    padding: 100px 0 100px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    &__first{
+        display: flex;
+        flex-direction: column;
+        row-gap: 70px;
+    }
+
+    &__rights{
+        font-family: 'DM Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        color: #FFFFFF;
+    }
+
+    &__second{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        column-gap: 408px;
+    }
+
+    &__nav{
+        display: flex;
+        column-gap: 100px;
+    }
+
+    &__links{
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    &__links>li{
+        list-style-type: none;
+    }
+
+    &__link{
+        font-family: 'DM Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        text-decoration: none;
+
+    }
+
+}
